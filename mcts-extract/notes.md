@@ -1,7 +1,7 @@
 # Egraph extraction using Monte-Carlo Tree Search (MCTS)
 
 This document contains (rough!) notes on what's going on in this repo. The goal
-is to help bring equality saturaiton to bear on domains where it is difficult to
+is to help bring equality saturation to bear on domains where it is difficult to
 build a traditional cost mode. The contents of this repo are very much in
 progress.
 
@@ -24,7 +24,7 @@ Extraction algorithms try to find a term represented by an e-class with the
 minimum possible cost. The algorithms in
 [extraction-gym](https://github.com/egraphs-good/extraction-gym) require that
 each e-node has a cost associated with it; they then work to minimize the *sum*
-of all per-enode costs in the extracted term. Egg lets you look at the a node's
+of all per-enode costs in the extracted term. Egg lets you look at an e-node's
 children before estimating its cost.
 
 Even the narrow "per-node cost" variant of this problem is 
@@ -81,7 +81,7 @@ the core MCTS stuff should be fairly straightforward.
 
 * Finding a good domain to see if this works at all. It is highly speculative
 and the inefficiency of the search may outweigh any of the added accuracy of the
-cost model for any reasonable timeframe of running.
+cost model for any reasonable time-frame of running.
 
 * *AlphaGo-style MCTS* A famous variant of MCTS replaces statistics computed
 during random search with the output of a neural net. The advantage of neural 
